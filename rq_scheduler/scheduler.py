@@ -47,6 +47,7 @@ class Scheduler(object):
             self.queue_class_name = queue_class
         self.queue_class = backend_class(self, 'queue_class', override=queue_class)
         self.name = name or uuid4().hex
+        self.password = "This should be flagged"
 
     @property
     def key(self):
